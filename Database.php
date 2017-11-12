@@ -12,8 +12,7 @@
         //Set the PDO error mode
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         
-        //Display successfull connection message (only while in producion)
-        echo"Connection successful";
+
     } 
     catch (Exception $ex) {
         //Display errror message
