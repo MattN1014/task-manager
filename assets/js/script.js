@@ -11,6 +11,7 @@ $(document).ready(function(){
 			data: formData,
 			success: function(data){
 				$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data);
+				document.getElementById("create-task").reset();
 			}
 		});
 	});
