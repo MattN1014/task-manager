@@ -6,7 +6,7 @@
 				id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 				name VARCHAR(35) NOT NULL UNIQUE,
 				description VARCHAR(255) NOT NULL,
-				status VARCHAR(25) DEFAULT 'Not Complated',
+				status VARCHAR(25) DEFAULT 'Not Completed',
 				created_at TIMESTAMP
 			)";
 
