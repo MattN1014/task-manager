@@ -15,4 +15,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$('#task-list').load('read.php');
+
 });
