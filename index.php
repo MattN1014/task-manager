@@ -4,9 +4,9 @@
 ?>
 
     <div class="container-fluid">
-        <section class="col-lg-6 col-sm-12">
+        <section class="col-lg-6 col-sm-12 white">
             <h3 class="text-primary">Create a new task</h3><hr>
-            <form action="" method="POST">
+            <form id="create-task" action="" method="POST">
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Name</label>
                     <div class="col-lg-10">
@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-12 control-label">Description</label>
+                    <label class="col-lg-2 control-label">Description</label>
                     <div class="col-lg-10">
                         <textarea class="form-control" rows="3" name="description" id="description"></textarea>
                     </div>
