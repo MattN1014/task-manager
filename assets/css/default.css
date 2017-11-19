@@ -11,3 +11,10 @@
   width: 300px;
   z-index: 1;
 }
+.editable {
+  cursor: pointer;
+}
+.editable:hover {
+  background-color: lightyellow;
+  background-size: 100%;
+}
