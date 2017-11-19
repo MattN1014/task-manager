@@ -13,11 +13,20 @@
 
 			$output = "
 				<tr>
-	                <td><div> $tasks->name </div></td>
-	                <td><div> $tasks->description </div></td>
-	                <td><div> $tasks->status </div></td>
+	                <td title='Click to edit'>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskName(this, '{$tasks->id}')\"> $tasks->name </div>
+	                </td>
+	                <td title='Click to edit'>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskdescription(this, '{$tasks->id}')\"> $tasks->description </div>
+	                </td>
+	                <td title='Click to edit'>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskstatus(this, '{$tasks->id}')\"> $tasks->status </div>
+	                </td>
 	                <td> $created_date </td>
-	                <td style='width: 5%;'><button class='btn btn-raised btn-danger btn-sm' style='margin: 0;'><i class='fa fa-times'></i></button>
+	                <td style='width: 5%;'>
+	                	<button class='btn btn-raised btn-danger btn-sm' style='margin: 0;' onclick=\"deleteTask('{$tasks->id}')\">
+	                		<i class='fa fa-times'></i>
+	                	</button>
 	                </td>
 	            </tr>
 			";
