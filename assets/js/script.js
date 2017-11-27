@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 		var form = $(this);
 		var formData = form.serialize();
+		$('#name_error').html("");
+		$('#description_error').html("");
 
 		$.ajax({
 			url: 'create.php', 
