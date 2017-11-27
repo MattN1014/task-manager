@@ -9,9 +9,24 @@ $(document).ready(function(){
 			url: 'create.php', 
 			method: 'POST',
 			data: formData,
+			dataType: 'json',
+			encode: true,
 			success: function(data){
-				$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data);
+				if(data.success === false){
+
+					if(data.message.name !== "") {
+						//Display error
+						$('#name_error').css("display","block").html(data.message.name);
+					}
+					if(data.message.description !== "") {
+						//Display error
+						$('#description_error').css("display","block").html(data.message.description);
+					}
+				}
+				else {
+					$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data.message);
 				document.getElementById("create-task").reset();
+				}
 			}
 		});
 	});
