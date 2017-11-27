@@ -46,7 +46,7 @@ function makeElementEditable(div) {
 }
 
 //enabled update of task name
-function updateTaskName(target, taskId){
+function updateTask(target, taskId, column_name){
 	var data = target.textContent;
 	target.style.border = "none";
 	target.style.padding = "0px";
@@ -56,43 +56,7 @@ function updateTaskName(target, taskId){
 	$.ajax({
 		url: 'update.php', 
 		method: 'POST',
-		data: {name: data, id:taskId},
-		success: function(data){
-			$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data);
-		}
-	});
-}
-
-//enable update of task description
-function updateTaskdescription(target, taskId){
-	var data = target.textContent;
-	target.style.border = "none";
-	target.style.padding = "0px";
-	target.style.background = "#ececec";
-	target.contentEditable = false;
-
-	$.ajax({
-		url: 'update.php', 
-		method: 'POST',
-		data: {description: data, id:taskId},
-		success: function(data){
-			$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data);
-		}
-	});
-}
-
-//enable update of task status
-function updateTaskstatus(target, taskId){
-	var data = target.textContent;
-	target.style.border = "none";
-	target.style.padding = "0px";
-	target.style.background = "#ececec";
-	target.contentEditable = false;
-
-	$.ajax({
-		url: 'update.php', 
-		method: 'POST',
-		data: {status: data, id:taskId},
+		data: {theData: data, id:taskId, column:column_name},
 		success: function(data){
 			$('#ajax_msg').css("display", "block").delay(3000).slideUp(300).html(data);
 		}

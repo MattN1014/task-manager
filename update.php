@@ -2,19 +2,20 @@
 	
 	include_once'Database.php';
 
-	if(isset($_POST['name']) && isset($_POST['id'])){
-		$name = trim($_POST['name']);
+	if(isset($_POST['id'])){
+		$column = trim($_POST['column']);
+		$theData = $_POST['theData'];
 		$id = $_POST['id'];
 
 		try {
-			$updateQuery = "UPDATE tasks SET name = :name 
+			$updateQuery = "UPDATE tasks SET {$column} = :placeholder 
 							WHERE id = :id";
 
 			$statement = $conn->prepare($updateQuery);
-			$statement->execute(array(":name" => $name, ":id" => $id));
+			$statement->execute(array(":placeholder" => $theData, ":id" => $id));
 
 			if($statement->rowCount() == 1){
-				echo "Task name updated successfully";
+				echo "Task {$column} updated successfully";
 			}
 			else {
 				echo "You did not make any changes";

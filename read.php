@@ -14,13 +14,13 @@
 			$output = "
 				<tr>
 	                <td title='Click to edit'>
-	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskName(this, '{$tasks->id}')\"> $tasks->name </div>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTask(this, '{$tasks->id}', 'name')\"> $tasks->name </div>
 	                </td>
 	                <td title='Click to edit'>
-	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskdescription(this, '{$tasks->id}')\"> $tasks->description </div>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTask(this, '{$tasks->id}', 'description')\"> $tasks->description </div>
 	                </td>
 	                <td title='Click to edit'>
-	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTaskstatus(this, '{$tasks->id}')\"> $tasks->status </div>
+	                	<div class='editable' onclick=\"makeElementEditable(this)\" onblur=\"updateTask(this, '{$tasks->id}', 'status')\"> $tasks->status </div>
 	                </td>
 	                <td> $created_date </td>
 	                <td style='width: 5%;'>
