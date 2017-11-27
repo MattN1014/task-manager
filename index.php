@@ -12,11 +12,12 @@
                     <div class="col-lg-10">
                         <input name="name" class="form-control" id="name" type="text">
                         <span class="help-block text-danger" id="name_error"></span>
+                        <br />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Description</label>
-                    <div class="col-lg-10" style="margin-top: 20px;">
+                    <div class="col-lg-10">
                         <textarea class="form-control" rows="3" name="description" id="description"></textarea>
                         <span class="help-block text-danger" id="description_error"></span>
                     </div>
